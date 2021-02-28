@@ -1,0 +1,35 @@
+{
+  "name": "@openpgp/hkp-client",
+  "version": "0.0.1",
+  "description": "A client for the OpenPGP HTTP Keyserver Protocol (HKP) in order to lookup and upload keys on standard public key servers.",
+  "main": "src/hkp.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --require esm test/hkp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openpgpjs/hkp-client.git"
+  },
+  "keywords": [
+    "hkp",
+    "client",
+    "openpgp"
+  ],
+  "author": "Tankred Hase",
+  "license": "LGPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/openpgpjs/hkp-client/issues"
+  },
+  "homepage": "https://github.com/openpgpjs/hkp-client#readme",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "esm": "^3.2.25",
+    "mocha": "^8.3.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
