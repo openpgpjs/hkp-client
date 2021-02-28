@@ -1,10 +1,10 @@
-const openpgp = typeof window !== 'undefined' && window.openpgp ? window.openpgp : require('../..');
+const HKP = require('..').default;
 
 const chai = require('chai');
 
 const { expect } = chai;
 
-module.exports = () => describe.skip('HKP unit tests', function() {
+describe('HKP unit tests', function() {
   this.timeout(60000); // eslint-disable-line no-invalid-this
 
   let hkp;
@@ -119,7 +119,7 @@ h3bdqlMa87hRGnWluKpJT+XRP0UGiN8UGWo8OEpdz8KbvVTCUVya4g==
 -----END PGP PUBLIC KEY BLOCK-----`;
 
   beforeEach(function() {
-    hkp = new openpgp.HKP(openpgp.config.keyserver);
+    hkp = new HKP();
   });
 
   afterEach(function() {});

@@ -1,4 +1,4 @@
-// OpenPGP.js - An OpenPGP implementation in javascript
+// hkp-client - A HKP client implementation in javascript
 // Copyright (C) 2015 Tankred Hase
 //
 // This library is free software; you can redistribute it and/or
@@ -15,8 +15,6 @@
 // License along with this library; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
-import defaultConfig from './config';
-
 /**
  * This class implements a client for the OpenPGP HTTP Keyserver Protocol (HKP)
  * in order to lookup and upload keys on standard public key servers.
@@ -29,8 +27,8 @@ class HKP {
    *   openpgp.config.keyserver (https://keyserver.ubuntu.com)
    * @param {Object} [config] - Full configuration, defaults to openpgp.config
    */
-  constructor(keyServerBaseUrl, config = defaultConfig) {
-    this._baseUrl = keyServerBaseUrl || config.keyserver;
+  constructor(keyServerBaseUrl = 'https://keyserver.ubuntu.com') {
+    this._baseUrl = keyServerBaseUrl;
     this._fetch = typeof globalThis.fetch === 'function' ? globalThis.fetch : require('node-fetch');
   }
 
