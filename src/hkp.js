@@ -84,4 +84,4 @@ class HKP {
   }
 }
 
-export default HKP;
+module.exports = HKP;

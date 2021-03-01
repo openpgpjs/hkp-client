@@ -10,7 +10,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --require esm test/hkp.js"
+    "test": "mocha test/hkp.js"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,6 @@
   "homepage": "https://github.com/openpgpjs/hkp-client#readme",
   "devDependencies": {
     "chai": "^4.3.0",
-    "esm": "^3.2.25",
     "mocha": "^8.3.0"
   },
   "dependencies": {

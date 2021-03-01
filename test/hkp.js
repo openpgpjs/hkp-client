@@ -1,4 +1,4 @@
-const HKP = require('..').default;
+const HKP = require('..');
 
 const chai = require('chai');
 
