@@ -10,7 +10,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/hkp.js"
+    "test": "mocha test/hkp.js",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
