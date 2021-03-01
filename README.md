@@ -12,12 +12,13 @@ import HKP from '@openpgp/hkp-client';
 import { readKey } from 'openpgp';
 
 (async () => {
-  var hkp = new HKP(); // Defaults to https://keyserver.ubuntu.com, or pass another keyserver URL as a string
-
-  let publicKeyArmored = await hkp.lookup({
+  const hkp = new HKP(); // Defaults to https://keyserver.ubuntu.com, or pass another keyserver URL as a string
+  const publicKeyArmored = await hkp.lookup({
       query: 'alice@example.com'
   });
-  let publicKey = await readKey({ armoredKey: publicKeyArmored });
+  const publicKey = await readKey({
+    armoredKey: publicKeyArmored
+  });
 })();
 ```
 
@@ -26,9 +27,9 @@ import { readKey } from 'openpgp';
 ```js
 import HKP from '@openpgp/hkp-client';
 (async () => {
-  var hkp = new HKP('https://pgp.mit.edu');
+  const hkp = new HKP('https://pgp.mit.edu');
 
-  var publicKeyArmored = `-----BEGIN PGP PUBLIC KEY BLOCK-----
+  const publicKeyArmored = `-----BEGIN PGP PUBLIC KEY BLOCK-----
 ...
 -----END PGP PUBLIC KEY BLOCK-----`;
 
