@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A client for the OpenPGP HTTP Keyserver Protocol (HKP) in order to lookup and upload keys on standard public key servers.",
   "main": "src/hkp.js",
+  "browser": {
+    "node-fetch": false
+  },
   "directories": {
     "test": "test"
   },
